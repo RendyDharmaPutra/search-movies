@@ -7,7 +7,7 @@ import SubDesc from '@/components/sub';
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Detail({ params }) {
-  const { data, error } = useSWR(`http://www.omdbapi.com/?apikey=37642a8&i=${params.id}&plot=full`, fetcher);
+  const { data, error } = useSWR(`https://www.omdbapi.com/?apikey=37642a8&i=${params.id}&plot=full`, fetcher);
 
   return (
     <div className="relative p-6 flex flex-col items-center xl:flex-row xl:justify-around ">
